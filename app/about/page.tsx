@@ -29,20 +29,31 @@ export default function AboutPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-white pt-32">
+        <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="py-10 bg-gradient-to-br from-[#F9FBFD] to-white">
-                <div className="max-w-[1640px] mx-auto px-6 text-center">
+            <section className="relative h-[600px] flex items-center justify-center pt-32 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/images/voeltzmann_lab_realism_v1.png"
+                        alt="VÖLTZMANN Laboratory"
+                        fill
+                        className="object-cover brightness-[0.85]"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/40 to-white/90"></div>
+                </div>
+
+                <div className="relative z-10 max-w-[1440px] mx-auto px-6 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         className="max-w-4xl mx-auto"
                     >
-                        <h1 className="text-5xl font-medium text-[#003568] mb-6">
+                        <h1 className="text-6xl font-light text-[#003568] mb-8 tracking-tight">
                             Über VÖLTZMANN
                         </h1>
-                        <p className="text-xl text-[#707070] font-light leading-relaxed">
+                        <p className="text-2xl text-[#003568] font-light leading-relaxed max-w-3xl mx-auto">
                             Wir sind ein deutsches Medizintechnik-Unternehmen mit der Mission,
                             Schlafqualität durch innovative Neurotechnologie nachhaltig zu verbessern.
                         </p>
@@ -51,33 +62,33 @@ export default function AboutPage() {
             </section>
 
             {/* Mission Statement */}
-            <section className="py-10">
-                <div className="max-w-[1640px] mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <section className="py-24">
+                <div className="max-w-[1440px] mx-auto px-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
                         <div>
-                            <h2 className="text-4xl font-medium text-[#555555] mb-6">
+                            <h2 className="text-4xl font-light text-[#003568] mb-8">
                                 Unsere Mission
                             </h2>
-                            <p className="text-[#707070] font-light text-lg leading-relaxed mb-6">
+                            <p className="text-[#555555] font-light text-lg leading-relaxed mb-6">
                                 Schlaf ist die Grundlage für Gesundheit und Lebensqualität. Trotzdem leiden
                                 Millionen Menschen unter Schlafstörungen, die mit konventionellen Methoden
                                 schwer zu behandeln sind.
                             </p>
-                            <p className="text-[#707070] font-light text-lg leading-relaxed mb-6">
+                            <p className="text-[#555555] font-light text-lg leading-relaxed mb-6">
                                 VÖLTZMANN entwickelt evidenzbasierte, technologische Lösungen, die auf
                                 neurowissenschaftlichen Erkenntnissen basieren. Unsere Produkte vereinen
                                 deutsche Präzision mit medizinischer Sicherheit.
                             </p>
-                            <p className="text-[#707070] font-light text-lg leading-relaxed">
-                                Wir glauben: Besserer Schlaf sollte für jeden zugänglich sein �?ohne
+                            <p className="text-[#555555] font-light text-lg leading-relaxed">
+                                Wir glauben: Besserer Schlaf sollte für jeden zugänglich sein – ohne
                                 Medikamente, ohne invasive Eingriffe, aber mit wissenschaftlicher Fundierung.
                             </p>
                         </div>
 
-                        <div className="bg-gradient-to-br from-[#003568] to-[#179A97] text-white p-12">
-                            <h3 className="text-3xl font-medium mb-6">Unsere Vision</h3>
-                            <p className="text-lg font-light leading-relaxed opacity-90">
-                                "Eine Welt, in der jeder Mensch Zugang zu regenerativem Schlaf hat �?
+                        <div className="bg-[#003568] text-white p-12 shadow-2xl rounded-sm">
+                            <h3 className="text-3xl font-light mb-8">Unsere Vision</h3>
+                            <p className="text-xl font-light leading-relaxed opacity-90 italic">
+                                "Eine Welt, in der jeder Mensch Zugang zu regenerativem Schlaf hat –
                                 unterstützt durch intelligente, sichere und evidenzbasierte Technologie."
                             </p>
                         </div>
@@ -86,9 +97,9 @@ export default function AboutPage() {
             </section>
 
             {/* Values */}
-            <section className="py-10 bg-[#F9FBFD]">
-                <div className="max-w-[1640px] mx-auto px-6">
-                    <h2 className="text-4xl font-medium text-[#555555] mb-12 text-center">
+            <section className="py-24 bg-[#F9FBFD]">
+                <div className="max-w-[1440px] mx-auto px-6">
+                    <h2 className="text-4xl font-medium text-[#003568] mb-16 text-center">
                         Unsere Werte
                     </h2>
 
@@ -100,15 +111,15 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-white p-8 text-center hover:shadow-xl transition-shadow duration-300 rounded-sm"
+                                className="bg-white p-10 text-center hover:shadow-xl transition-shadow duration-300 rounded-sm group"
                             >
-                                <div className="w-16 h-16 bg-[#003568] flex items-center justify-center mx-auto mb-6 text-white">
+                                <div className="w-16 h-16 bg-[#003568] flex items-center justify-center mx-auto mb-8 text-white rounded-sm group-hover:bg-[#179A97] transition-colors">
                                     {value.icon}
                                 </div>
-                                <h3 className="text-xl font-medium text-[#555555] mb-3">
+                                <h3 className="text-xl font-bold text-[#003568] mb-4">
                                     {value.title}
                                 </h3>
-                                <p className="text-[#707070] font-light leading-relaxed">
+                                <p className="text-[#555555] font-light leading-relaxed">
                                     {value.description}
                                 </p>
                             </motion.div>
@@ -118,17 +129,17 @@ export default function AboutPage() {
             </section>
 
             {/* Team */}
-            <section className="py-10">
-                <div className="max-w-[1640px] mx-auto px-6">
-                    <h2 className="text-4xl font-medium text-[#555555] mb-6 text-center">
+            <section className="py-24">
+                <div className="max-w-[1440px] mx-auto px-6">
+                    <h2 className="text-4xl font-medium text-[#003568] mb-6 text-center">
                         Unser Team
                     </h2>
-                    <p className="text-center text-[#707070] font-light text-lg mb-12 max-w-3xl mx-auto">
+                    <p className="text-center text-[#555555] font-light text-xl mb-16 max-w-3xl mx-auto">
                         VÖLTZMANN wurde von einem interdisziplinären Team aus Neurowissenschaftlern,
                         Ingenieuren und Medizinern gegründet.
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         {[
                             {
                                 name: 'Dr. Max Mustermann',
@@ -149,8 +160,8 @@ export default function AboutPage() {
                                 image: '/images/voeltzmann_staff_clinical.png'
                             },
                         ].map((member, index) => (
-                            <div key={index} className="bg-[#F9FBFD] p-8 text-center hover:shadow-xl transition-all rounded-sm group">
-                                <div className="relative w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden shadow-md grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div key={index} className="bg-white p-8 text-center hover:shadow-2xl transition-all rounded-sm group border-transparent border hover:border-gray-50">
+                                <div className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-lg grayscale group-hover:grayscale-0 transition-all duration-700">
                                     <Image
                                         src={member.image}
                                         alt={member.name}
@@ -158,11 +169,11 @@ export default function AboutPage() {
                                         className="object-cover"
                                     />
                                 </div>
-                                <h3 className="text-xl font-medium text-[#555555] mb-4">
+                                <h3 className="text-2xl font-medium text-[#003568] mb-2">
                                     {member.name}
                                 </h3>
-                                <p className="text-[#179A97] font-medium mb-3">{member.role}</p>
-                                <p className="text-[#707070] font-light text-sm">{member.background}</p>
+                                <p className="text-[#179A97] font-bold uppercase text-xs tracking-widest mb-4">{member.role}</p>
+                                <p className="text-[#555555] font-light">{member.background}</p>
                             </div>
                         ))}
                     </div>
@@ -170,15 +181,15 @@ export default function AboutPage() {
             </section>
 
             {/* Made in Germany */}
-            <section className="py-10 bg-gradient-to-br from-[#003568] to-[#179A97] text-white">
+            <section className="py-20 bg-[#003568] text-white">
                 <div className="max-w-4xl mx-auto px-6 text-center">
-                    <h2 className="text-4xl font-medium mb-6">
+                    <h2 className="text-4xl font-light mb-8">
                         Made in Germany
                     </h2>
-                    <p className="text-xl font-light leading-relaxed opacity-90">
+                    <p className="text-2xl font-light leading-relaxed opacity-90">
                         Alle VÖLTZMANN Produkte werden in Deutschland entwickelt und gefertigt.
                         Wir stehen für höchste Qualitätsstandards, medizinische Sicherheit und
-                        absolute Verlässlichkeit �?heute und in Zukunft.
+                        absolute Verlässlichkeit – heute und in Zukunft.
                     </p>
                 </div>
             </section>
