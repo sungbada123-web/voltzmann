@@ -43,7 +43,7 @@ export default function AboutPage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/40 to-white/90"></div>
                 </div>
 
-                <div className="relative z-10 max-w-[1280px] mx-auto px-6 text-center">
+                <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -63,42 +63,42 @@ export default function AboutPage() {
 
             {/* Mission Statement */}
             <section className="py-24">
-                <div className="max-w-[1280px] mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-                        <div>
-                            <h2 className="text-4xl font-light text-[#003568] mb-8">
-                                Unsere Mission
-                            </h2>
-                            <p className="text-[#555555] font-light text-lg leading-relaxed mb-6">
+                <div className="max-w-5xl mx-auto px-6">
+                    <div className="text-center mb-20">
+                        <h2 className="text-4xl font-light text-[#003568] mb-8">
+                            Unsere Mission
+                        </h2>
+                        <div className="max-w-3xl mx-auto text-[#555555] font-light text-lg leading-relaxed space-y-6">
+                            <p>
                                 Schlaf ist die Grundlage für Gesundheit und Lebensqualität. Trotzdem leiden
                                 Millionen Menschen unter Schlafstörungen, die mit konventionellen Methoden
                                 schwer zu behandeln sind.
                             </p>
-                            <p className="text-[#555555] font-light text-lg leading-relaxed mb-6">
+                            <p>
                                 VÖLTZMANN entwickelt evidenzbasierte, technologische Lösungen, die auf
                                 neurowissenschaftlichen Erkenntnissen basieren. Unsere Produkte vereinen
                                 deutsche Präzision mit medizinischer Sicherheit.
                             </p>
-                            <p className="text-[#555555] font-light text-lg leading-relaxed">
+                            <p>
                                 Wir glauben: Besserer Schlaf sollte für jeden zugänglich sein – ohne
                                 Medikamente, ohne invasive Eingriffe, aber mit wissenschaftlicher Fundierung.
                             </p>
                         </div>
+                    </div>
 
-                        <div className="bg-[#003568] text-white p-12 shadow-2xl rounded-sm">
-                            <h3 className="text-3xl font-light mb-8">Unsere Vision</h3>
-                            <p className="text-xl font-light leading-relaxed opacity-90 italic">
-                                "Eine Welt, in der jeder Mensch Zugang zu regenerativem Schlaf hat –
-                                unterstützt durch intelligente, sichere und evidenzbasierte Technologie."
-                            </p>
-                        </div>
+                    <div className="bg-[#003568] text-white p-12 shadow-2xl rounded-sm text-center max-w-3xl mx-auto">
+                        <h3 className="text-3xl font-light mb-8">Unsere Vision</h3>
+                        <p className="text-xl font-light leading-relaxed opacity-90 italic">
+                            "Eine Welt, in der jeder Mensch Zugang zu regenerativem Schlaf hat –
+                            unterstützt durch intelligente, sichere und evidenzbasierte Technologie."
+                        </p>
                     </div>
                 </div>
             </section>
 
             {/* Values */}
             <section className="py-24 bg-[#F9FBFD]">
-                <div className="max-w-[1280px] mx-auto px-6">
+                <div className="max-w-5xl mx-auto px-6">
                     <h2 className="text-4xl font-medium text-[#003568] mb-16 text-center">
                         Unsere Werte
                     </h2>
@@ -130,7 +130,7 @@ export default function AboutPage() {
 
             {/* Team */}
             <section className="py-24">
-                <div className="max-w-[1280px] mx-auto px-6">
+                <div className="max-w-5xl mx-auto px-6">
                     <h2 className="text-4xl font-medium text-[#003568] mb-6 text-center">
                         Unser Team
                     </h2>
