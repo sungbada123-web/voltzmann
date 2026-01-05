@@ -154,10 +154,10 @@ export default function AboutPage() {
                                 image: '/images/voeltzmann_staff_engineer_office.png'
                             },
                             {
-                                name: 'Dr. Thomas Weber',
+                                name: 'Dr. Wei Chen',
                                 role: 'Chief Medical Officer',
-                                background: 'Schlafmedizin, Universitätsklinikum Heidelberg',
-                                image: '/images/voeltzmann_staff_clinical.png'
+                                background: 'Integrative Medizin & Somnologie, Universität Shanghai',
+                                image: '/images/lifestyle-elderly-asian.png'
                             },
                         ].map((member, index) => (
                             <div key={index} className="bg-white p-8 text-center hover:shadow-2xl transition-all rounded-sm group border-transparent border hover:border-gray-50">
