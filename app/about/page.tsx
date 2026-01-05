@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Target, Users, Lightbulb, Shield } from 'lucide-react';
+import Image from 'next/image';
 
 export default function AboutPage() {
     const values = [
@@ -133,20 +134,30 @@ export default function AboutPage() {
                                 name: 'Dr. Max Mustermann',
                                 role: 'CEO & Gründer',
                                 background: 'Neurowissenschaften, Charité Berlin',
+                                image: '/images/voeltzmann_staff_portrait_v2.png'
                             },
                             {
                                 name: 'Dr. Anna Schmidt',
                                 role: 'CTO',
                                 background: 'Elektrotechnik, TU München',
+                                image: '/images/voeltzmann_staff_engineer_office.png'
                             },
                             {
                                 name: 'Dr. Thomas Weber',
                                 role: 'Chief Medical Officer',
                                 background: 'Schlafmedizin, Universitätsklinikum Heidelberg',
+                                image: '/images/voeltzmann_staff_clinical.png'
                             },
                         ].map((member, index) => (
-                            <div key={index} className="bg-[#F9FBFD] p-8 text-center hover:shadow-lg transition-all rounded-sm">
-                                <div className="w-24 h-24 bg-gradient-to-br from-[#003568] to-[#179A97] mx-auto mb-6 rounded-none"></div>
+                            <div key={index} className="bg-[#F9FBFD] p-8 text-center hover:shadow-xl transition-all rounded-sm group">
+                                <div className="relative w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden shadow-md grayscale group-hover:grayscale-0 transition-all duration-500">
+                                    <Image
+                                        src={member.image}
+                                        alt={member.name}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
                                 <h3 className="text-xl font-medium text-[#555555] mb-4">
                                     {member.name}
                                 </h3>
