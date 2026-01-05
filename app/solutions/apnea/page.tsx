@@ -41,7 +41,7 @@ export default function ApneaSolutionPage() {
                             { title: 'Oxygen Desat Correlation', desc: 'Syncs with pulse oximetry data to map desaturation events against sleep cycles.' },
                             { title: 'Physician Report', desc: 'Automatically generates a standardized PDF for clinical consultation.' }
                         ].map((item, i) => (
-                            <div key={i} className="p-12 border border-[#EDF2F7] hover:border-[#179A97] transition-all duration-500 rounded-sm">
+                            <div key={i} className="p-12 hover:shadow-xl transition-all duration-500 rounded-sm bg-white">
                                 <h3 className="text-xl font-medium text-[#003568] mb-4">{item.title}</h3>
                                 <p className="text-[#718096] font-light text-sm leading-relaxed">{item.desc}</p>
                             </div>

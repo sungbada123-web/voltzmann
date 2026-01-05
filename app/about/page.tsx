@@ -28,7 +28,7 @@ export default function AboutPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white pt-32">
             {/* Hero Section */}
             <section className="py-10 bg-gradient-to-br from-[#F9FBFD] to-white">
                 <div className="max-w-[1640px] mx-auto px-6 text-center">
@@ -99,7 +99,7 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-white border border-[#C3C3C3] p-8 text-center"
+                                className="bg-white p-8 text-center hover:shadow-xl transition-shadow duration-300 rounded-sm"
                             >
                                 <div className="w-16 h-16 bg-[#003568] flex items-center justify-center mx-auto mb-6 text-white">
                                     {value.icon}
@@ -145,7 +145,7 @@ export default function AboutPage() {
                                 background: 'Schlafmedizin, Universitätsklinikum Heidelberg',
                             },
                         ].map((member, index) => (
-                            <div key={index} className="bg-[#F9FBFD] border border-[#C3C3C3] p-8 text-center">
+                            <div key={index} className="bg-[#F9FBFD] p-8 text-center hover:shadow-lg transition-all rounded-sm">
                                 <div className="w-24 h-24 bg-gradient-to-br from-[#003568] to-[#179A97] mx-auto mb-6 rounded-none"></div>
                                 <h3 className="text-xl font-medium text-[#555555] mb-4">
                                     {member.name}

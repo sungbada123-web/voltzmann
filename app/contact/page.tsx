@@ -18,7 +18,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                     {/* Contact Form */}
-                    <div className="bg-[#F9FBFD] border border-[#C3C3C3] p-10">
+                    <div className="bg-[#F9FBFD] p-10 rounded-sm shadow-sm">
                         <h2 className="text-2xl font-medium text-[#555555] mb-6">
                             Nachricht senden
                         </h2>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                             </div>
                         </div>
 
-                        <div className="bg-[#F9FBFD] border border-[#C3C3C3] p-8">
+                        <div className="bg-[#F9FBFD] p-8 rounded-sm shadow-sm">
                             <h3 className="text-lg font-medium text-[#555555] mb-4">
                                 Geschäftszeiten
                             </h3>

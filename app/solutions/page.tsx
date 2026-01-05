@@ -54,7 +54,7 @@ export default function SolutionsPage() {
                                 <h3 className="text-xs font-bold text-[#A0AEC0] uppercase tracking-widest mb-10 border-b pb-4">{group.title}</h3>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     {group.items.map((item, i) => (
-                                        <div key={i} className="p-8 bg-[#F9FBFD] border border-transparent hover:border-[#003568]/10 hover:bg-white transition-all group">
+                                        <div key={i} className="p-8 bg-[#F9FBFD] hover:shadow-lg hover:bg-white transition-all group rounded-sm">
                                             <div className="w-10 h-10 flex items-center justify-center bg-white shadow-sm rounded-sm text-[#003568] group-hover:bg-[#003568] group-hover:text-white transition-all mb-6">
                                                 {item.icon}
                                             </div>
