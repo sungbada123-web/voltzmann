@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Target, Users, Lightbulb, Shield } from 'lucide-react';
@@ -43,7 +43,7 @@ export default function AboutPage() {
                     <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/40 to-white/90"></div>
                 </div>
 
-                <div className="relative z-10 max-w-[1440px] mx-auto px-6 text-center">
+                <div className="relative z-10 max-w-[1280px] mx-auto px-6 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function AboutPage() {
 
             {/* Mission Statement */}
             <section className="py-24">
-                <div className="max-w-[1440px] mx-auto px-6">
+                <div className="max-w-[1280px] mx-auto px-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
                         <div>
                             <h2 className="text-4xl font-light text-[#003568] mb-8">
@@ -98,7 +98,7 @@ export default function AboutPage() {
 
             {/* Values */}
             <section className="py-24 bg-[#F9FBFD]">
-                <div className="max-w-[1440px] mx-auto px-6">
+                <div className="max-w-[1280px] mx-auto px-6">
                     <h2 className="text-4xl font-medium text-[#003568] mb-16 text-center">
                         Unsere Werte
                     </h2>
@@ -130,7 +130,7 @@ export default function AboutPage() {
 
             {/* Team */}
             <section className="py-24">
-                <div className="max-w-[1440px] mx-auto px-6">
+                <div className="max-w-[1280px] mx-auto px-6">
                     <h2 className="text-4xl font-medium text-[#003568] mb-6 text-center">
                         Unser Team
                     </h2>
@@ -154,10 +154,10 @@ export default function AboutPage() {
                                 image: '/images/voeltzmann_staff_engineer_office.png'
                             },
                             {
-                                name: 'Dr. Wei Chen',
+                                name: 'Dr. Rachel Liang',
                                 role: 'Chief Medical Officer',
                                 background: 'Integrative Medizin & Somnologie, Universität Shanghai',
-                                image: '/images/lifestyle-elderly-asian.png'
+                                image: '/images/dr_rachel_liang.png'
                             },
                         ].map((member, index) => (
                             <div key={index} className="bg-white p-8 text-center hover:shadow-2xl transition-all rounded-sm group border-transparent border hover:border-gray-50">
