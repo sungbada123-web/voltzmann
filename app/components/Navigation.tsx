@@ -88,9 +88,9 @@ const menuConfig: Record<string, {
       {
         title: 'Research',
         items: [
-          { name: 'Clinical Trials', href: '/science#trials' },
-          { name: 'Whitepapers', href: '/science#publications' },
-          { name: 'Sleep Data Bank', href: '/science#data' },
+          { name: 'Clinical Trials', href: '/science/trials' },
+          { name: 'Whitepapers', href: '/science/publications' },
+          { name: 'Sleep Data Bank', href: '/science/data' },
         ]
       },
       {
@@ -278,9 +278,8 @@ export default function Navigation() {
           {/* Right Side: Language + CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <select className="text-sm text-[#4A5568] bg-transparent border-none cursor-pointer focus:outline-none">
-              <option value="en">EN</option>
               <option value="de">DE</option>
-              <option value="zh">中文</option>
+              <option value="en">EN</option>
             </select>
             <Link
               href="/contact"

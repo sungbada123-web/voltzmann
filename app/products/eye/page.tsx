@@ -50,7 +50,7 @@ export default function DiagnostikPage() {
                                 {/* Placeholder for actual image generation */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#F0F4F8] to-[#FFFFFF] rounded-full opacity-50 blur-3xl"></div>
                                 <Image
-                                    src="/images/voeltzmann-eye-radar.png"
+                                    src="/images/voeltzmann-eye-product.png"
                                     alt="VÖLTZMANN Radar Sensor"
                                     fill
                                     className="object-contain"

@@ -4,60 +4,74 @@ import { motion } from 'framer-motion';
 import { products } from '../data/products';
 import Link from 'next/link';
 import { ArrowRight, Check } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ProductMatrix() {
     return (
-        <section className="py-10 bg-white">
+        <section className="py-20 bg-white">
             <div className="container">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 px-4">
-                    <div>
-                        <h2 className="text-4xl font-light text-[#003568] mb-4">Das VÖLTZMANN Ökosystem</h2>
-                        <div className="h-1 w-20 bg-[#009999]"></div>
-                    </div>
+                <div className="flex flex-col mb-24 px-4">
+                    <h2 className="text-5xl font-light text-[#003568] mb-6">Das VÖLTZMANN Ökosystem</h2>
+                    <div className="h-1 w-24 bg-[#009999]"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+                <div className="space-y-32">
                     {products.map((product, index) => (
-                        <div
+                        <motion.div
                             key={product.id}
-                            className="bg-[#F9FBFD] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full rounded-sm overflow-hidden group"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className={`flex flex-col lg:flex-row items-center gap-16 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                                }`}
                         >
-                            {/* Card Header Strip */}
-                            <div className="h-2 w-full" style={{ backgroundColor: product.color }}></div>
+                            {/* Product Image Section */}
+                            <div className="w-full lg:w-1/2 aspect-square relative bg-[#F9FBFD] rounded-sm group overflow-hidden">
+                                <Image
+                                    src={`/images/voeltzmann-${product.id}-product.png`}
+                                    alt={product.name}
+                                    fill
+                                    className="object-contain p-20 transform group-hover:scale-105 transition-transform duration-700"
+                                />
+                                <div
+                                    className="absolute inset-0 opacity-10 pointer-events-none"
+                                    style={{ background: `radial-gradient(circle at center, ${product.color}, transparent)` }}
+                                ></div>
+                            </div>
 
-                            <div className="p-8 flex-grow flex flex-col">
-                                {product.isNew && (
-                                    <span className="inline-block px-2 py-0.5 bg-[#E6FFFA] text-[#009999] text-[10px] font-bold uppercase tracking-widest mb-4 w-fit rounded-[2px]" >
-                                        New Release
-                                    </span>
-                                )}
+                            {/* Info Section */}
+                            <div className="w-full lg:w-1/2 px-4 lg:px-8">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-12 h-[2px]" style={{ backgroundColor: product.color }}></div>
+                                    <span className="text-xs font-bold text-[#A0AEC0] uppercase tracking-[0.2em]">{product.category}</span>
+                                </div>
 
-                                <h3 className="text-2xl font-bold text-[#1A202C] mb-4 group-hover:text-[#003366] transition-colors">{product.name}</h3>
-                                <p className="text-xs font-bold text-[#009999] uppercase tracking-wider mb-6">{product.tagline}</p>
+                                <h3 className="text-5xl font-light text-[#003568] mb-6">{product.name}</h3>
+                                <p className="text-[#009999] font-bold text-sm uppercase tracking-widest mb-8">{product.tagline}</p>
 
-                                <p className="text-sm text-[#4A5568] leading-relaxed mb-8 flex-grow font-light pb-8">
+                                <p className="text-xl text-[#555555] font-light leading-relaxed mb-10">
                                     {product.description}
                                 </p>
 
-                                {/* Specs Grid */}
-                                <div className="grid grid-cols-1 gap-2 mb-8">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4 mb-12">
                                     {product.features.map((feature, i) => (
-                                        <div key={i} className="flex items-start gap-2">
-                                            <Check className="w-3 h-3 text-[#009999] mt-1 shrink-0" strokeWidth={3} />
-                                            <span className="text-xs font-semibold text-[#2D3748]">{feature}</span>
+                                        <div key={i} className="flex items-start gap-3">
+                                            <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#009999]" />
+                                            <span className="text-base text-[#2D3748] font-medium">{feature}</span>
                                         </div>
                                     ))}
                                 </div>
 
                                 <Link
                                     href={product.href}
-                                    className="w-full btn-secondary group-hover:bg-[#003366] group-hover:text-white group-hover:border-[#003366] justify-between"
+                                    className="inline-flex items-center gap-4 bg-[#003568] text-white px-10 py-5 text-sm font-bold uppercase tracking-[0.15em] hover:bg-[#179A97] transition-all rounded-[2px]"
                                 >
-                                    View Specs
-                                    <ArrowRight className="w-4 h-4" />
+                                    View Specifications
+                                    <ArrowRight className="w-5 h-5" />
                                 </Link>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

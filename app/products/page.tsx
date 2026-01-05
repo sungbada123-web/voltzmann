@@ -5,8 +5,8 @@ import ProductMatrix from '../components/ProductMatrix';
 
 export default function ProductsPage() {
     return (
-        <div className="min-h-screen pt-32 pb-32">
-            <div className="max-w-[1640px] mx-auto px-12">
+        <div className="min-h-screen pt-32 pb-32 bg-white">
+            <div className="max-w-[1640px] mx-auto px-6 lg:px-12">
                 {/* Header - Precise Typography */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -21,12 +21,11 @@ export default function ProductsPage() {
                         Das VÖLTZMANN Ökosystem
                     </h1>
                     <p className="text-2xl text-[#707070] font-light max-w-4xl mx-auto leading-relaxed">
-                        Vier Säulen für die perfekte Nacht. Von klinischer Therapie bis zur sensorischen Interaktion �?
-                        vollständig integriert und medizinisch validiert.
+                        Vier Säulen für die perfekte Nacht. Von klinischer Therapie bis zur sensorischen Interaktion – vollständig integriert und medizinisch validiert.
                     </p>
                 </motion.div>
 
-                {/* Matrix Component */}
+                {/* Matrix Component (Refactored to 1-column) */}
                 <ProductMatrix />
 
                 {/* Bottom Section - Sharp Design */}
@@ -35,7 +34,7 @@ export default function ProductsPage() {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.8 }}
-                    className="mt-40 text-center bg-[#F9FBFD] py-10"
+                    className="mt-40 text-center bg-[#F9FBFD] py-20 rounded-sm"
                 >
                     <h2 className="text-5xl font-light text-[#555555] mb-8">
                         Bereit für den Schlaf von morgen?
@@ -45,7 +44,7 @@ export default function ProductsPage() {
                     </p>
                     <a
                         href="/contact"
-                        className="inline-block px-12 py-5 bg-[#003568] text-white hover:bg-[#004d99] transition-all shadow-none text-sm font-bold uppercase tracking-widest"
+                        className="inline-block px-12 py-5 bg-[#003568] text-white hover:bg-[#179A97] transition-all shadow-lg text-sm font-bold uppercase tracking-widest rounded-sm"
                     >
                         Kontaktieren Sie uns
                     </a>
@@ -54,4 +53,3 @@ export default function ProductsPage() {
         </div>
     );
 }
-
